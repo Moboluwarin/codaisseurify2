@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+tolu = Artist.create!(email:"tolu@yahoo.com", password:"1234abcd")
+song1 = Song.create!(title: "Heal the world", song_url: "https://www.youtube.com", artist: tolu)

@@ -9,10 +9,16 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
+     <%= render "shared/navbar" %>
     <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
     <%= yield %>
+    <br><br>
+    <hr>
+
+    <%= link_to "[Back to Home]", root_path %>
+
+
   </body>
 </html>

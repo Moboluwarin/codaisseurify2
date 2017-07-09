@@ -1,19 +1,18 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update]
-  before_action :authenticate_artist!, except: [:show]
 
   def index
-    @songs = current_artist.songs
+    @artist=Artist.find(params[:id])
+    @songs = @artist.songs
   end
 
   def show; end
 
-  def new
-    @song = current_artist.songs.build
-  end
+   def new
+     @song =Song.new
+   end
 
   def create
-    @song = current_artist.songs.build(song_params)
 
     if @song.save
       redirect_to @song, notice: "Song Saved"

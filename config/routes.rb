@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'songs#index'
-  get "songs" => "songs#index"
-  devise_for :artists
+  root to: 'artists#index'
+  get 'artists/:id' => 'songs#index', as: :artist
+  get 'songs/new' => 'songs#new', as: :new_song
+  get 'songs/:id' => 'songs#show', as: :song
+
 
   resources :artists, only: [:show]
   resources :songs, except: [:destroy]

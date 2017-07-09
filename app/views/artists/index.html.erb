@@ -1,0 +1,10 @@
+
+
+
+<h1>Artists</h1>
+
+<% @artists.each do |artist| %>
+  <ul>
+    <li><%= link_to artist.name, artist_path(artist.id)%><img width="30" height="30"<%= image_tag artist.image_url %>/></li>
+  </ul>
+<% end %>

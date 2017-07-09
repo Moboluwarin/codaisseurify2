@@ -9,10 +9,13 @@ class SongsController < ApplicationController
   def show; end
 
    def new
+
      @song =Song.new
+
    end
 
   def create
+     @song = Song.new(song_params)
 
     if @song.save
       redirect_to @song, notice: "Song Saved"
@@ -31,6 +34,12 @@ class SongsController < ApplicationController
     end
   end
 
+  def destroy
+    @song=Song.find(params[:id])
+    @song.destroy
+    redirect_to :back
+  end
+
   private
 
   def set_song
@@ -41,7 +50,7 @@ class SongsController < ApplicationController
     params
       .require(:song)
       .permit(
-        :title, :song_url
+        :title, :song_url,:artist_id
       )
   end
 end

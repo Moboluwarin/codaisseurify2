@@ -19,6 +19,7 @@
           <div class="col-md-3 right">
             <%= link_to "View", song, class: "btn btn-default" %>
             <%= link_to "Update", edit_song_path(song), class: "btn btn-default" %>
+            <%= link_to "Delete", song_path(song), method: :delete, data: {confirm: "Are you sure ?"} ,class: "btn btn-default"  %>
           </div>
         </div>
         <% end %>

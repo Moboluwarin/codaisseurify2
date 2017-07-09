@@ -13,4 +13,5 @@ artist3 = Artist.create!(email:"kim@yahoo.com", name:"Kim", image_url:"http://re
 artist4 = Artist.create!(email:"lima@yahoo.com", name:"Lima", image_url:"http://res.cloudinary.com/codaisseurify2/image/upload/v1499544561/sample.jpg", password:"1234abcd")
 song1 = Song.create!(title: "Heal the world", song_url: "https://www.youtube.com", artist: artist1)
 song2 = Song.create!(title: "Heal the world", song_url: "https://www.youtube.com", artist: artist2)
-song3 = song1 = Song.create!(title: "Heal the world", song_url: "https://www.youtube.com", artist:artist3)
+song3 = Song.create!(title: "Heal the world", song_url: "https://www.youtube.com", artist:artist3)
+song4 = Song.create!(title: "Heal the world", song_url: "https://www.youtube.com", artist:artist1)
